@@ -122,7 +122,7 @@ module.exports = async (
       case `develop`:
         return {
           path: directory,
-          filename: `[name].js`,
+          filename: `steam-[name].js`,
           // Add /* filename */ comments to generated require()s in the output.
           pathinfo: true,
           // Point sourcemap entries to original disk location (format as URL on Windows)
@@ -148,8 +148,8 @@ module.exports = async (
         }
       case `build-javascript`:
         return {
-          filename: `[name]-[contenthash].js`,
-          chunkFilename: `[name]-[contenthash].js`,
+          filename: `steam-[name]-[contenthash].js`,
+          chunkFilename: `steam-[name]-[contenthash].js`,
           path: directoryPath(`public`),
           publicPath: withTrailingSlash(publicPath),
         }
